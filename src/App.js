@@ -1,4 +1,5 @@
 import './App.css';
+import LoginButton from './components/LoginButton';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         <p>
           Here we go
         </p>
+        <LoginButton></LoginButton>
       </header>
     </div>
   );
