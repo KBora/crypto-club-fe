@@ -6,7 +6,7 @@ const Profile = () => {
   const [userMetadata, setUserMetadata] = useState(null);
 
   useEffect( () => {
-    const getUserMetadata = async (getAccessTokenSilently, user) => {
+    const getUserMetadata = async () => {
       const domain = "dev--3pnfqat.us.auth0.com";
   
       try {
@@ -31,7 +31,7 @@ const Profile = () => {
       }
     };
   
-    getUserMetadata(getAccessTokenSilently, user);
+    getUserMetadata();
   }, [getAccessTokenSilently, user]);
 
   if (isLoading) {
