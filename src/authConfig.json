@@ -1,0 +1,6 @@
+{
+    "domain": "dev--3pnfqat.us.auth0.com",
+    "clientId": "UiSTZn0gOXLFIIgDXZNRSZqnkVzaFsQh",
+    "audience": "https://dev--3pnfqat.us.auth0.com/api/v2/",
+    "scope": "read:current_user update:current_user_metadata"
+}
