@@ -22,8 +22,8 @@ const TotalBalance = () => {
 
   return (
     <div>      
-      <div>Total Balance: $USD{data.balance_snapshots.amount_usd}</div>
-      <div>Time: {data.balance_snapshots.timestamp}</div>
+      <div>Total Balance: $USD{data.balance_snapshots[0].amount_usd}</div>
+      <div>Time: {data.balance_snapshots[0].timestamp}</div>
 
     </div>
   );

@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
 import { getConfig } from "./config";
+import LoginButton from './components/LoginButton';
 
 function App() {
   const config = getConfig();
@@ -37,11 +38,14 @@ function App() {
     return <div>Loading ...</div>;
   }
 
+  if (isAuthenticated) (
+    <ApolloWrapper accessToken={accessToken}/>
+  )
+
   return (
-    isAuthenticated && (
-      <ApolloWrapper accessToken={accessToken}/>
-    )
-    
+    <div>
+      <LoginButton></LoginButton>
+    </div>    
   );
 }
 
