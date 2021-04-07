@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
 import { getConfig } from "./config";
 import LoginButton from './components/LoginButton';
+import { isLeafType } from 'graphql';
 
 function App() {
   const config = getConfig();
@@ -38,14 +39,17 @@ function App() {
     return <div>Loading ...</div>;
   }
 
-  if (isAuthenticated) (
-    <ApolloWrapper accessToken={accessToken}/>
-  )
+  let page;
+  if (isAuthenticated) {
+    page = <ApolloWrapper accessToken={accessToken}/> 
+  } else {
+    page = <LoginButton></LoginButton>
+  }    
 
   return (
     <div>
-      <LoginButton></LoginButton>
-    </div>    
+      {page}  
+    </div>
   );
 }
 
