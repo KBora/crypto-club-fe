@@ -146,28 +146,200 @@
         <div class="flex-1 min-w-0">
           <h1 class="text-lg font-medium leading-6 text-gray-900 sm:truncate">
             Home
-          </h1>          
+          </h1>    
+          <h2 class="text-2xl font-light leading-1 text-gray-600 sm:truncate">
+            8 April 2021
+          </h2>      
         </div>
       </div>
 
       <!-- Overview -->
-      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-4">
+      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-6">
         <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">Overview</h2>
+        
+        <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="p-5">
+              <div class="flex items-center">
+                <div class="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">
+                      Current balance
+                    </dt>
+                    <dd>
+                      <div class="text-lg font-medium text-gray-900">
+                        $30,659.45 <span class="text-gray-500">USD</span>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="p-5">
+              <div class="flex items-center">
+                <div class="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">
+                      Profit
+                    </dt>
+                    <dd>
+                      <div class="text-lg font-medium text-gray-900">
+                        $5,012.13 <span class="text-gray-500">USD</span>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="p-5">
+              <div class="flex items-center">
+                <div class="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">
+                      ROI
+                    </dt>
+                    <dd>
+                      <div class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
+                        <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="sr-only">Increased by</span>
+                        5.02%
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
       </div>
 
       <!-- Performance -->
-      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-4">
+      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-6">
         <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">Performance</h2>
+        <div class="mt-6">Graph goes here</div>
       </div>
 
       <!-- Deposit History -->
-      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-4">
+      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-6">
         <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">Deposit History</h2>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="mt-6 flex flex-col">
+          <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+              <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Date
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Crypto
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Tokens
+                      </th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        USD
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Odd row -->
+                    <tr class="bg-white">
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        12 Feb 2021 12:45AM
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        BTC
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        0.043
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        $342.34
+                      </td>
+                    </tr>
+
+                    <!-- Even row -->
+                    <tr class="bg-gray-50">
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        05 Jan 2021 7:49PM
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        BTC
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        0.043
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        $342.34
+                      </td>
+                    </tr>
+
+                    <!-- More items... -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Total Pool -->
-      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-4">
+      <div class="px-4 mt-6 sm:px-6 lg:px-8 border-b border-gray-200 pb-6">
         <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">Total Pool</h2>
+        
+        <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="p-5">
+              <div class="flex items-center">
+                <div class="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">
+                      Current balance
+                    </dt>
+                    <dd>
+                      <div class="text-lg font-medium text-gray-900">
+                        $180,000.00 <span class="text-gray-500">USD</span>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>           
+          </div>
+
+          <div class="col-span-2 bg-white overflow-hidden shadow rounded-lg">
+            <div class="p-5">
+              <div class="flex items-center">
+                <div class="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt class="text-sm font-medium text-gray-500 truncate">
+                      My percentage *
+                    </dt>
+                    <dd>
+                      Donut chart goes here
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>           
+          </div>
+        </div>
+
       </div>
 
       </div>
