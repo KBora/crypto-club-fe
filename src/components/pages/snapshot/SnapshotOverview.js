@@ -1,6 +1,5 @@
 import React from "react";
 import PageSection from "../../ui-elements/PageSection";
-import Card from "../../ui-elements/Card";
 import CardWithTitle from "../../ui-elements/CardWithTitle";
 
 const SnapshotOverview = () => {

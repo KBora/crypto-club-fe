@@ -1,4 +1,3 @@
-import { printIntrospectionSchema } from "graphql";
 import React from "react";
 
 const Card = (props) => {
