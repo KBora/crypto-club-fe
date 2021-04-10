@@ -7,7 +7,7 @@ const CardWithTitle = (props) => {
   return (
     <Card>
       <dl>
-        <dt class="text-sm font-medium text-gray-500 truncate">
+        <dt className="text-sm font-medium text-gray-500 truncate">
           {props.title}
         </dt>
         <dd>
