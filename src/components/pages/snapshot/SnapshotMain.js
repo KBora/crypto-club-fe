@@ -1,7 +1,10 @@
 import React from "react";
+import SnapshotDepositHistory from "./SnapshotDepositHistory";
 import SnapshotMobileHeader from "./SnapshotMobileHeader";
 import SnapshotOverview from "./SnapshotOverview";
+import SnapshotPerformance from "./SnapshotPerformance";
 import SnapshotTitle from "./SnapshotTitle";
+import SnapshotTotalPool from "./SnapshotTotalPool";
 
 const SnapshotMain = () => {
   // Main column
@@ -11,6 +14,9 @@ const SnapshotMain = () => {
       <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
         <SnapshotTitle></SnapshotTitle>
         <SnapshotOverview></SnapshotOverview>
+        <SnapshotPerformance></SnapshotPerformance>
+        <SnapshotDepositHistory></SnapshotDepositHistory>
+        <SnapshotTotalPool></SnapshotTotalPool>
       </main>
     </div>
   );
