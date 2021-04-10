@@ -2,13 +2,20 @@ import './App.css';
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
-import getConfig from './config';
+
 import LoginButton from './components/LoginButton';
 
 function App() {
-  const config = getConfig();
+  const config =  {
+    "domain": "dev--3pnfqat.us.auth0.com",
+    "clientId": "UiSTZn0gOXLFIIgDXZNRSZqnkVzaFsQh",
+    "audience": "https://dev--3pnfqat.us.auth0.com/api/v2/",
+    "scope": "read:current_user update:current_user_metadata"
+  };
+
   const { isLoading, error, getAccessTokenSilently, isAuthenticated } = useAuth0();
   const [accessToken, setAccessToken] = useState("");
+
 
   useEffect( () => {
     const getAccessToken = async () => {
