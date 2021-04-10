@@ -6,6 +6,8 @@ import LogoutButton from './LogoutButton';
 import Profile from './Profile';
 import TotalBalance from './TotalBalance';
 
+import DashboardSnapshot from './DashboardSnapshot';
+
 const createApolloClient = (authToken) => {
     return new ApolloClient({
       link: new HttpLink({
@@ -26,6 +28,7 @@ const ApolloWrapper = ({ accessToken }) => {
   const client = createApolloClient(accessToken);
   return (
     <ApolloProvider client={client}>
+      <DashboardSnapshot></DashboardSnapshot>
       <div className="App">
         <header className="App-header">
           <p>

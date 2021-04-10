@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
 import { getConfig } from "./config";
 import LoginButton from './components/LoginButton';
-import { isLeafType } from 'graphql';
 
 function App() {
   const config = getConfig();
