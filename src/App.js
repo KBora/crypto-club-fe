@@ -2,7 +2,7 @@ import './App.css';
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
-import { getConfig } from "./config";
+import getConfig from './config';
 import LoginButton from './components/LoginButton';
 
 function App() {
