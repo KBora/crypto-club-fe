@@ -2,17 +2,15 @@ import './App.css';
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
-import getConfig from './config';
 import LoginButton from './components/LoginButton';
 
 function App() {
-  const config = getConfig();
   const { isLoading, error, getAccessTokenSilently, isAuthenticated } = useAuth0();
   const [accessToken, setAccessToken] = useState("");
 
   useEffect( () => {
     const getAccessToken = async () => {
-      const domain = config.domain;
+      const domain = "dev--3pnfqat.us.auth0.com";
       try {
         const access_token = await getAccessTokenSilently({
           audience: `https://${domain}/api/v2/`,
@@ -28,7 +26,7 @@ function App() {
       getAccessToken();
     }
     
-  }, [getAccessTokenSilently, isAuthenticated, config]);
+  }, [getAccessTokenSilently, isAuthenticated]);
 
   if (error) {
     return <div>Oops... {error.message}</div>;
