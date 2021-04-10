@@ -14,7 +14,7 @@ const ChartPerformance = () => {
       <VictoryChart
         theme={theme}
         domainPadding={100}
-        width={350}
+
       >
         <VictoryAxis        
           tickFormat={["Total Deposits", "Current Balance"]}

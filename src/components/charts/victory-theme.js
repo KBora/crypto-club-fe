@@ -24,11 +24,11 @@ const letterSpacing = "normal";
 const fontSize = 11;
 
 // Layout
-const padding = 8;
+const padding = 6;
 const baseProps = {
   width: 350,
   height: 350,
-  padding: 50
+  padding: { top: 25, left: 50, right: 50, bottom: 25 }
 };
 
 // * Labels
@@ -229,8 +229,7 @@ export const theme = {
         },
         labels: Object.assign({}, baseLabelStyles, { padding: 20 })
       }
-    },
-    baseProps
+    }
   ),
   scatter: Object.assign(
     {

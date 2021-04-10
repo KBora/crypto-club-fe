@@ -8,7 +8,7 @@ const SnapshotOverview = () => {
     <PageSection title="Overview">
       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-        <CardWithTitle title="Current balance">
+        <CardWithTitle title="My current balance">
           <div className="text-lg font-medium text-gray-900">
             $30,659.45 <span className="text-gray-500">USD</span>
           </div>
