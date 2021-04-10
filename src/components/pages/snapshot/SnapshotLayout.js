@@ -1,5 +1,5 @@
 import React from "react";
-import SidebarDesktop from "../../SidebarDesktop";
+import SidebarDesktop from "./SidebarDesktop";
 import SnapshotMain from "./SnapshotMain";
 
 const SnapshotLayout = () => {

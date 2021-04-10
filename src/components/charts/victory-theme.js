@@ -220,7 +220,7 @@ export const theme = {
   ),
   pie: Object.assign(
     {
-      colorScale: colors,
+
       style: {
         data: {
           padding,

@@ -1,4 +1,5 @@
 import React from "react";
+import MobileHeaderUserDropdown from './MobileHeaderUserDropdown';
 
 const SnapshotMobileHeader = () => {             
   // Mobile header - expandable menu icon, avatar
@@ -20,21 +21,10 @@ const SnapshotMobileHeader = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </button>
-      <div className="flex-1 flex justify-end px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center">
-          <div className="ml-3 relative">
-            <div>
-              <button type="button" className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" id="user-menu" aria-expanded="false" aria-haspopup="true">
-                <span className="sr-only">Open user menu</span>
-                <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixqx=jtNp99sGBV&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-              </button>
-            </div>
-            <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-200 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-              <div className="py-1" role="none">
-                <div className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Logout</div>
-              </div>
-            </div>
-          </div>
+      <div className="flex-1 flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <div className="flex font-bold">Crypto Club</div>
+        <div className="flex items-center">          
+          <MobileHeaderUserDropdown></MobileHeaderUserDropdown>
         </div>
       </div>
     </div>

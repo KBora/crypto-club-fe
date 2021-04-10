@@ -14,7 +14,7 @@ const ChartPerformance = () => {
       <VictoryChart
         theme={theme}
         domainPadding={100}
-
+        width={350}
       >
         <VictoryAxis        
           tickFormat={["Total Deposits", "Current Balance"]}
@@ -24,13 +24,11 @@ const ChartPerformance = () => {
           // tickFormat specifies how ticks should be displayed
           tickFormat={(x) => (`$${x / 1000}k`)}
         />
-        
-
         <VictoryBar
           data={data} 
           x="time"
           y="usd"
-          labels={true}
+          labels={[true, true]}
           labelComponent={
             <VictoryLabel
               text={({datum}) => `$${datum.usd.toString()}`}   

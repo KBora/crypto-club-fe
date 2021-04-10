@@ -1,10 +1,10 @@
 import { ApolloClient, ApolloProvider, InMemoryCache, HttpLink } from '@apollo/client';
 import { useAuth0 } from "@auth0/auth0-react";
 
-import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
-import Profile from './Profile';
-import TotalBalance from './TotalBalance';
+// import LoginButton from './LoginButton';
+// import LogoutButton from './LogoutButton';
+// import Profile from './Profile';
+// import TotalBalance from './TotalBalance';
 
 import SnapshotLayout from './pages/snapshot/SnapshotLayout';
 
@@ -29,7 +29,7 @@ const ApolloWrapper = ({ accessToken }) => {
   return (
     <ApolloProvider client={client}>
       <SnapshotLayout></SnapshotLayout>
-      <div className="App">
+      {/* <div className="App">
         <header className="App-header">
           <p>
             Here we go
@@ -42,7 +42,7 @@ const ApolloWrapper = ({ accessToken }) => {
         <h3>Total Balance</h3>
         <TotalBalance></TotalBalance>
         <h6>Token: {accessToken}</h6>
-      </div>
+      </div> */}
     </ApolloProvider>
   );
 }

@@ -2,9 +2,9 @@ import React from "react";
 import { VictoryGroup, VictoryPie } from "victory";
 import { theme } from "./victory-theme";
 
-const ChartMyPerformance = (props) => {
+const ChartMyPercentage = (props) => {
   const data = [
-    { x: " ", y: 21},
+    { x: "21%", y: 21},
     { x: " ", y: 79}
   ];
 
@@ -16,26 +16,27 @@ const ChartMyPerformance = (props) => {
   // Home and date 
   return (
     <div className="max-w-md">
+      <h4 className="text-2xl font-medium">
+        {props.percentage}%
+      </h4>   
       <VictoryGroup
-        data={data}
-        theme={theme}
-       >
-          <text x="43%" y="54%" className="text-3xl text-center font-bold">{props.percentage}%</text>   
-          <VictoryPie            
-            standAlone={false}           
-            innerRadius={80}    
-            style={{
-              data: {
-                stroke: "#ffffff",
-                strokeWidth: 2,
-                fill: ({ index }) => findColor(index)
-              }
-            }} 
-          >          
-          </VictoryPie>
+        theme={theme}>
+      <VictoryPie            
+        standAlone={false}
+        innerRadius={80} 
+        data={data}   
+        style={{
+          data: {
+            stroke: "#ffffff",
+            strokeWidth: 2,
+            fill: ({ index }) => findColor(index)
+          }
+        }} 
+      >          
+      </VictoryPie>
       </VictoryGroup>
     </div>
   );
 };
 
-export default ChartMyPerformance;
+export default ChartMyPercentage;
