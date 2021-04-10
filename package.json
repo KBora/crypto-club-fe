@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@headlessui/react": "^0.3.2",
     "@tailwindcss/postcss7-compat": "^2.1.0",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.35",

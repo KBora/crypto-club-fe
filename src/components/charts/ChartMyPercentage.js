@@ -1,6 +1,5 @@
-import { printIntrospectionSchema } from "graphql";
 import React from "react";
-import { VictoryChart, VictoryGroup, VictoryPie,  VictoryLabel } from "victory";
+import { VictoryGroup, VictoryPie } from "victory";
 import { theme } from "./victory-theme";
 
 const ChartMyPerformance = (props) => {
