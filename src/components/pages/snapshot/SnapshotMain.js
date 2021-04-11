@@ -4,7 +4,6 @@ import { useQuery, gql } from '@apollo/client';
 import SnapshotDepositHistory from "./SnapshotDepositHistory";
 import SnapshotMobileHeader from "./SnapshotMobileHeader";
 import SnapshotOverview from "./SnapshotOverview";
-import SnapshotPerformance from "./SnapshotPerformance";
 import SnapshotTitle from "./SnapshotTitle";
 import SnapshotTotalPool from "./SnapshotTotalPool";
 
