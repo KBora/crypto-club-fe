@@ -2,7 +2,7 @@ import React from "react";
 import PageSection from "../../ui-elements/PageSection";
 import CardWithTitle from "../../ui-elements/CardWithTitle";
 
-const SnapshotOverview = () => {
+const SnapshotOverview = (props) => {
   // Current balance, profit and ROI
   return (
     <PageSection title="Overview">
