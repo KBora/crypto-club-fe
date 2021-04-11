@@ -43,10 +43,10 @@ const SnapshotMain = (props) => {
       
       <SnapshotMobileHeader user={props.user}></SnapshotMobileHeader>
       <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabIndex="0">
-        <SnapshotTitle timestamp={data.balance_snapshots[0].timestamp}></SnapshotTitle>
-        <SnapshotOverview balance={data.balance_snapshots[0].amount_usd} percentage={data.users[0].percentage} deposits={data.deposits}></SnapshotOverview>        
+        <SnapshotTitle timestamp={data.balance_snapshots.length ? data.balance_snapshots[0].timestamp : 0}></SnapshotTitle>
+        <SnapshotOverview balance={data.balance_snapshots.length ? data.balance_snapshots[0].amount_usd: 0} percentage={data.users[0].percentage} deposits={data.deposits}></SnapshotOverview>        
         <SnapshotDepositHistory deposits={data.deposits}></SnapshotDepositHistory>
-        <SnapshotTotalPool balance={data.balance_snapshots[0].amount_usd} percentage={data.users[0].percentage}></SnapshotTotalPool>
+        <SnapshotTotalPool balance={data.balance_snapshots.length ? data.balance_snapshots[0].amount_usd: 0} percentage={data.users[0].percentage}></SnapshotTotalPool>
       </main>
     </div>
   );
