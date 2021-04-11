@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Transition } from '@headlessui/react'
 
-const MobileHeaderUserDropdown = () => {
+const MobileHeaderUserDropdown = (props) => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex-grow relative">
@@ -11,7 +11,7 @@ const MobileHeaderUserDropdown = () => {
               <span className="rounded-md shadow-sm">
                 <Menu.Button className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
                   <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixqx=jtNp99sGBV&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />                  
+                  <img className="h-8 w-8 rounded-full" src={props.user.picture} alt={props.user.name} />          
                 </Menu.Button>
               </span>
 
@@ -38,9 +38,9 @@ const MobileHeaderUserDropdown = () => {
                             active
                               ? "bg-gray-100 text-gray-900"
                               : "text-gray-700"
-                          } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                          } flex flex-col w-full px-4 py-2 text-sm leading-5 text-left`}
                         >
-                          Sign out
+                          <span class="font-medium inline">Sign out</span> <div>{props.user.name}</div>
                         </a>
                       )}
                     </Menu.Item>

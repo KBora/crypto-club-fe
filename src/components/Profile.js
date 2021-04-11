@@ -44,13 +44,6 @@ const Profile = () => {
         <span className="flex-1 flex flex-col min-w-0">
           <span className="pl-2 text-gray-900 text-sm font-medium truncate">{user.name}</span>
         </span>
-        {/* <p>{user.email}</p>
-        <h3>User Metadata</h3>
-        {userMetadata ? (
-          <pre>{JSON.stringify(userMetadata, null, 2)}</pre>
-        ) : (
-            "No user metadata defined"
-          )} */}
       </div>
     )
   );

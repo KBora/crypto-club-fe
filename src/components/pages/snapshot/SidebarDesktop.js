@@ -1,7 +1,7 @@
 import React from "react";
 import SidebarDesktopDropdown from "./SidebarDesktopDropdown";
 
-const SidebarDesktop = () => {
+const SidebarDesktop = (props) => {
 
   return (
     <div className="hidden lg:flex lg:flex-shrink-0">
@@ -11,7 +11,7 @@ const SidebarDesktop = () => {
         </div>
         <div className="h-0 flex-1 flex flex-col overflow-y-auto">
           <div className="px-3 mt-6 relative inline-block text-left">
-            <SidebarDesktopDropdown></SidebarDesktopDropdown>
+            <SidebarDesktopDropdown user={props.user}></SidebarDesktopDropdown>
           </div>
 
           <nav className="px-3 mt-6">

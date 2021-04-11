@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MobileHeaderUserDropdown from './MobileHeaderUserDropdown';
 import OffCanvasMenu from './OffCanvasMenu';
 
-const SnapshotMobileHeader = () => {             
+const SnapshotMobileHeader = (props) => {             
   // Mobile header - menu icon with off canvas menu, avatar with dropdown
 
   // Two open states as a hack way to deal with closing transition timing
@@ -11,13 +11,13 @@ const SnapshotMobileHeader = () => {
 
   const openMenu = () => {
     setIsOpen(true);    
-    isOpenDelay(true);    
+    setIsOpenDelay(true);    
   }
 
   function handleCloseButtonClick() {
     setIsOpen(false);
     setTimeout(() => {
-      isOpenDelay(false);
+      setIsOpenDelay(false);
     }, 300)
   }
 
@@ -36,7 +36,7 @@ const SnapshotMobileHeader = () => {
         <div className="flex-1 flex justify-between items-center px-4 sm:px-6 lg:px-8">
           <div className="flex font-bold text-2xl">Crypto Club</div>
           <div className="flex items-center">          
-            <MobileHeaderUserDropdown></MobileHeaderUserDropdown>
+            <MobileHeaderUserDropdown user={props.user}></MobileHeaderUserDropdown>
           </div>
         </div>
       </div>
