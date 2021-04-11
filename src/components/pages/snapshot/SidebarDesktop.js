@@ -5,7 +5,7 @@ const SidebarDesktop = () => {
 
   return (
     <div className="hidden lg:flex lg:flex-shrink-0">
-      <div className="flex flex-col w-64 border-r border-gray-200 pt-5 pb-4">
+      <div className="flex flex-col w-72 border-r border-gray-200 pt-5 pb-4">
         <div className="flex items-center flex-shrink-0 px-6">
           <h4 className="font-bold text-2xl">Crypto Club</h4>
         </div>

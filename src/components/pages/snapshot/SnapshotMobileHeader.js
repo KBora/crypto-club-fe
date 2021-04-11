@@ -4,24 +4,26 @@ import OffCanvasMenu from './OffCanvasMenu';
 
 const SnapshotMobileHeader = () => {             
   // Mobile header - menu icon with off canvas menu, avatar with dropdown
+
+  // Two open states as a hack way to deal with closing transition timing
   const [isOpen, setIsOpen] = useState(false)
-  const [isOpen2, setIsOpen2] = useState(false)
+  const [isOpenDelay, setIsOpenDelay] = useState(false)
 
   const openMenu = () => {
     setIsOpen(true);    
-    setIsOpen2(true);    
+    isOpenDelay(true);    
   }
 
   function handleCloseButtonClick() {
     setIsOpen(false);
     setTimeout(() => {
-      setIsOpen2(false);
+      isOpenDelay(false);
     }, 300)
   }
 
   return (
     <>
-      { isOpen2 && (
+      { isOpenDelay && (
         <OffCanvasMenu open={isOpen} onCloseButtonClick={handleCloseButtonClick}></OffCanvasMenu> 
       )}      
       <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200 lg:hidden">
