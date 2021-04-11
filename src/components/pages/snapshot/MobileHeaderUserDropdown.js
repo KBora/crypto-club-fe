@@ -1,7 +1,10 @@
 import React from "react";
 import { Menu, Transition } from '@headlessui/react'
+import { useAuth0 } from "@auth0/auth0-react";
 
 const MobileHeaderUserDropdown = (props) => {
+  const { logout } = useAuth0();
+
   return (
     <div className="flex items-center justify-center">
       <div className="flex-grow relative">
@@ -32,8 +35,8 @@ const MobileHeaderUserDropdown = (props) => {
                   <div className="py-1">
                     <Menu.Item>
                       {({ active }) => (
-                        <a
-                          href="#sign-out"
+                        <div
+                          onClick={() => logout({ returnTo: window.location.origin })}
                           className={`${
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -41,7 +44,7 @@ const MobileHeaderUserDropdown = (props) => {
                           } flex flex-col w-full px-4 py-2 text-sm leading-5 text-left`}
                         >
                           <span class="font-medium inline">Sign out</span> <div>{props.user.name}</div>
-                        </a>
+                        </div>
                       )}
                     </Menu.Item>
                   </div>

@@ -7,7 +7,7 @@ const SidebarDesktop = (props) => {
     <div className="hidden lg:flex lg:flex-shrink-0">
       <div className="flex flex-col w-72 border-r border-gray-200 pt-5 pb-4">
         <div className="flex items-center flex-shrink-0 px-6">
-          <h4 className="font-bold text-2xl">Crypto Club</h4>
+          <h4 className="font-extrabold text-2xl">Crypto Club</h4>
         </div>
         <div className="h-0 flex-1 flex flex-col overflow-y-auto">
           <div className="px-3 mt-6 relative inline-block text-left">

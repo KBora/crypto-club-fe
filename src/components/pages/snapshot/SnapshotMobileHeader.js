@@ -34,7 +34,7 @@ const SnapshotMobileHeader = (props) => {
           </svg>
         </button>
         <div className="flex-1 flex justify-between items-center px-4 sm:px-6 lg:px-8">
-          <div className="flex font-bold text-2xl">Crypto Club</div>
+          <div className="flex font-extrabold text-2xl">Crypto Club</div>
           <div className="flex items-center">          
             <MobileHeaderUserDropdown user={props.user}></MobileHeaderUserDropdown>
           </div>

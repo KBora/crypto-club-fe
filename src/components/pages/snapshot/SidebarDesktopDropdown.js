@@ -1,9 +1,11 @@
 import React from "react";
 import { Menu, Transition } from '@headlessui/react'
 import Avatar from "../../ui-elements/Avatar";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const SidebarDesktopDropdown = (props) => {
-  
+  const { logout } = useAuth0();
+
   return (
     <div className="flex items-center justify-center">
       <div className="flex-grow relative">
@@ -40,8 +42,8 @@ const SidebarDesktopDropdown = (props) => {
                   <div className="py-1">
                     <Menu.Item>
                       {({ active }) => (
-                        <a
-                          href="#sign-out"
+                        <div
+                          onClick={() => logout({ returnTo: window.location.origin })}
                           className={`${
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -49,7 +51,7 @@ const SidebarDesktopDropdown = (props) => {
                           } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
                         >
                           Sign out
-                        </a>
+                        </div>
                       )}
                     </Menu.Item>
                   </div>

@@ -2,7 +2,7 @@ import './App.css';
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from 'react';
 import ApolloWrapper from './components/ApolloWrapper';
-import LoginButton from './components/LoginButton';
+import Login from './components/pages/login/Login';
 
 function App() {
   const { isLoading, error, getAccessTokenSilently, isAuthenticated } = useAuth0();
@@ -40,7 +40,7 @@ function App() {
   if (isAuthenticated) {
     page = <ApolloWrapper accessToken={accessToken}/> 
   } else {
-    page = <LoginButton></LoginButton>
+    page = <Login></Login>
   }    
 
   return (

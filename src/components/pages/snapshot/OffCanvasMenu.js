@@ -47,7 +47,7 @@ const OffCanvasMenu = (props) => {
                   </button>
                 </div>
                 <div className="flex-shrink-0 flex items-center px-4">
-                  <div className="text-2xl font-bold">Crypto Club</div>
+                  <div className="text-2xl font-extrabold">Crypto Club</div>
                 </div>
                 <div className="mt-5 flex-1 h-0 overflow-y-auto">
                   <nav className="px-2">
