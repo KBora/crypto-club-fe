@@ -2,10 +2,10 @@ import React from "react";
 import { VictoryChart, VictoryBar, VictoryAxis, VictoryLabel } from "victory";
 import { theme } from "./victory-theme";
 
-const ChartPerformance = () => {
+const ChartPerformance = (props) => {
   const data = [
-    {time: "Total Deposits", usd: 13000},
-    {time: "Current Balance", usd: 30659.45},
+    {time: "Total Deposits", usd: props.depositTotal},
+    {time: "Current Balance", usd: props.balance},
   ];
 
   // Home and date

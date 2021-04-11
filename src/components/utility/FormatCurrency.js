@@ -8,15 +8,15 @@ const FormatCurrency = (props) => {
     return Math.round((number + Number.EPSILON) * 100) / 100
   }
 
-  const addSpaces = (x) => {
+  const addSeparators = (x, separator) => {
     var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, separator);
     return parts.join(".");
   }
 
   return (
     <>
-      ${addSpaces(roundTwoDecimals(props.number))} <span className="text-gray-500">{props.currency}</span>
+      ${addSeparators(roundTwoDecimals(props.number), ',')} <span className="text-gray-500">{props.currency}</span>
     </>
   );
 };

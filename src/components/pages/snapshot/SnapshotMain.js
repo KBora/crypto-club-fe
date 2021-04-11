@@ -42,14 +42,10 @@ const SnapshotMain = (props) => {
   return (
     <div className="flex flex-col w-0 flex-1 overflow-hidden">
       
-      <div>
-          {JSON.stringify(data)}
-      </div>
       <SnapshotMobileHeader user={props.user}></SnapshotMobileHeader>
       <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabIndex="0">
         <SnapshotTitle></SnapshotTitle>
-        <SnapshotOverview balance={data.balance_snapshots[0].amount_usd} percentage={data.users[0].percentage}></SnapshotOverview>
-        <SnapshotPerformance></SnapshotPerformance>
+        <SnapshotOverview balance={data.balance_snapshots[0].amount_usd} percentage={data.users[0].percentage} deposits={data.deposits}></SnapshotOverview>        
         <SnapshotDepositHistory deposits={data.deposits}></SnapshotDepositHistory>
         <SnapshotTotalPool balance={data.balance_snapshots[0].amount_usd} percentage={data.users[0].percentage}></SnapshotTotalPool>
       </main>

@@ -7,6 +7,7 @@ import FormatCurrency from "../../utility/FormatCurrency";
 const SnapshotTotalPool = (props) => {
   // Total balance and percentage donut chart
 
+  //TODO: Convert this to backend query
   const getMyBalance = () => {
     return props.balance * props.percentage / 100;
   }

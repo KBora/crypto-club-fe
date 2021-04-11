@@ -4,8 +4,8 @@ import { theme } from "./victory-theme";
 
 const ChartMyPercentage = (props) => {
   const data = [
-    { x: "21%", y: 21},
-    { x: " ", y: 79}
+    { x: " ", y: props.percentage},
+    { x: " ", y: 100 - props.percentage}
   ];
 
   const findColor = (index) => {
