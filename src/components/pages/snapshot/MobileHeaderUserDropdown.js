@@ -43,7 +43,7 @@ const MobileHeaderUserDropdown = (props) => {
                               : "text-gray-700"
                           } flex flex-col w-full px-4 py-2 text-sm leading-5 text-left`}
                         >
-                          <span class="font-medium inline">Sign out</span> <div>{props.user.name}</div>
+                          <span className="font-medium inline">Sign out</span> <div>{props.user.name}</div>
                         </div>
                       )}
                     </Menu.Item>
